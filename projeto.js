@@ -1,45 +1,56 @@
-const nome = "Kisha"
-let nomeCientifico = "Felis Catus" 
-let tempoDeVida =  18 
-let classe = "Mamífero"
-let ambiente = "Doméstico"
-let extincao = false
+animal = { 
+    nome: "Kisha",
+    idade: 1,
+    tempoDeVida:  18, 
+    classe: "Mamífero",
+    ambiente: "Doméstico",
+    extincao: false
+} 
+animal1 = {
+    nome: "Mileide",
+    idade: 6,
+    extincao: false
+}
+animal2 = {
+    nome: "Mel",
+    idade: 2,
+    extincao: true
+}
+animal3 = {
+    nome: "Chiara",
+    idade: 1,
+    extincao: false
+}
 
+const animais = []
 
-const nome1 = "Mileide"
-const idade1 = 6
-const estaEmExtincao1 = false
+animais.push(animal)
+animais.push(animal1)
+animais.push(animal2)
+animais.push(animal3)
 
-const nome2 = "Mel"
-const idade2 = 2
-const estaEmExtincao2 = true
+if(animal.extincao){
+    animais.push(animais)
+} else {
+    alert("Item não adicionado.")
+}
 
-const nome3 = "Chiara"
-const idade3 = 1
-const estaEmExtincao3 = false
+if(animal1.extincao){
+    animais.push(animal1)
+} else {
+    alert("Item não adicionado.")
+}
 
+if(animal2.extincao){
+    animais.push(animal2)
+} else {
+    alert("Item não adicionado.")
+}
 
-const calculoMedia = (tempoDeVida + idade1 + idade2 + idade3) / 4
-console.log(calculoMedia) 
+if(animal3.extincao){
+    animais.push(animal3)
+} else {
+    alert("Item não adicionado.")
+}
 
-
-const verificaExtincao = extincao && estaEmExtincao1 && estaEmExtincao2 && estaEmExtincao3
-console.log(verificaExtincao)
-
-
-const comidasGato = ["Ração", "Petisco", "Leite", "Peixe"]
-const brinquedosGato = ["Bola", "Rato", "Penas"]
-
-
-const nomeToUpperCase = nome.toUpperCase()
-const nomeToUpperCase1 = nome1.toUpperCase()
-const nomeToUpperCase2 = nome2.toUpperCase()
-const nomeToUpperCase3 = nome3.toUpperCase()
-
-console.log("Nome do animal: ", nome.toUpperCase(), "\n", "Nome científico: ", nomeCientifico, "\n", "Tempo médio de vida: ", tempoDeVida, "\n", "Classe: ", classe, "\n", "Ambiente que convive: ", ambiente, "\n", "Está em extinção? ", extincao, "\n", "Comidas: ", comidasGato, "\n", "Brinquedos: ", brinquedosGato)
-
-console.log("Nome do animal : ", nome1.toUpperCase(), "\n", "idade: ", idade1, "\n", "Está em extinção? ", estaEmExtincao1, "\n", "Comidas: ", comidasGato, "\n", "Brinquedos: ", brinquedosGato)
-
-console.log("Nome do animal: ", nome2.toUpperCase(), "\n", "Idade: ", idade2, "\n", "Está em extinção? ", estaEmExtincao2, "\n", "Comidas: ", comidasGato, "\n", "Brinquedos: ", brinquedosGato)
-
-console.log("Nome do animal: ", nome3.toUpperCase(), "\n", "Idade: ", idade3, "\n", "Está em extinção? ", estaEmExtincao3, "\n", "Comidas: ", comidasGato, "Brinquedos: ", brinquedosGato)
+console.log(animais)
