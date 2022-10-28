@@ -16,6 +16,10 @@ body {
     align-items: center;
 }
 
+#btn img {
+    width: 20px;
+}
+
 header {
     text-align: center;
 }
@@ -41,15 +45,17 @@ header h1 {
 }
 
 .card {
-    display: grid;
-    justify-content: space-between;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: 1, 1fr;
+    display: flex;
+    justify-content: center;
     border: 2px solid black;
 }
 
 .card img {
     width: 500px;
+}
+
+.sumir { 
+    display: none;
 }
 
 .card h3 {
@@ -59,6 +65,11 @@ header h1 {
     justify-content: center;
     margin: 20px;
     margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.card p {
+    font-size: 22px;
 }
 
 .lista {
@@ -81,4 +92,26 @@ main p {
 h2 {
     display: flex;
     font-family: 'Noto Sans', sans-serif;
-   }
+}
+
+
+@media screen and (max-device-width:700px) {
+    .card img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-device-width:400px){
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card img {
+        width: 300px;
+        height: 400px;
+    }
+    
+}
